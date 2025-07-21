@@ -66,7 +66,7 @@ Metode ini **tidak disarankan untuk akun utama Anda**. Modifikasi terhadap klien
 
 1. Buka tab **Quests** di Discord dan **pilih misi apa saja**.
 
-2. Pastikan untuk memilih **"Quest on Desktop"**, bukan versi mobile.
+2. Pastikan untuk memilih **"Quest on Desktop"**, bukan versi console.
 
 <img src="./assets/quest-on-desktop.webp" alt="screenshot quest on desktop" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
 
