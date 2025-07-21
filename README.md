@@ -84,7 +84,7 @@ This method is **not recommended for your main account**. Modifying the Discord 
 
 <img src="./assets/verbose.webp" alt="screenshot verbose" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
 
-5. Paste the following code:
+5. Paste the following [code](./script.js):
 
 ```js
 delete window.$;

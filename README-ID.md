@@ -84,7 +84,7 @@ Metode ini **tidak disarankan untuk akun utama Anda**. Modifikasi terhadap klien
 
 <img src="./assets/verbose.webp" alt="screenshot verbose" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
 
-5. Tempel kode berikut:
+5. Tempel [kode](./script.js) berikut:
 
 ```js
 delete window.$;
