@@ -13,8 +13,17 @@ This method is **not recommended for your main account**. Modifying the Discord 
 ### Windows
 
 1. **Close Discord completely** (Right-click in taskbar > Quit).
+
+<img src="./assets/close-discord.webp" alt="screenshot close discord" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
 2. Press `Windows + R`, type: `%appdata%\discord`
+
+<img src="./assets/windows-run.webp" alt="screenshot windows run" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
 3. Backup the `settings.json` file → Rename it to `settings_old.json`
+
+<img src="./assets/settings.webp" alt="screenshot settings" width="400" style="margin-bottom: 16px; margin-left: 20px;"/>
+
 4. Replace the content of `settings.json` with:
 
 #### Settings Code
@@ -38,6 +47,9 @@ This method is **not recommended for your main account**. Modifying the Discord 
 
 ### macOS
 
+> ⚠️ Note: I don't have a Mac device, so there's no screenshot for this section.  
+> However, you can still follow the steps below carefully — they are written clearly.
+
 1. Quit Discord.
 
 2. Open Finder > Go > "Go to Folder" (`Shift + Cmd + G`)
@@ -52,17 +64,27 @@ This method is **not recommended for your main account**. Modifying the Discord 
 
 ## 🧪 Step 2: Complete Quest Without Playing
 
-1. Open Discord, go to the `Quests tab`, and `accept any quest`.
+1. Open Discord, go to the **Quests tab**, and **accept any quest**.
 
-2. Open Developer Tools with:
+2. Make sure to select **"Quest on Desktop"**, not mobile.
+
+<img src="./assets/quest-on-desktop.webp" alt="screenshot quest on desktop" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
+3. Open Developer Tools in the **installed Discord desktop app** (not Discord Web):
 
    - Windows: `Ctrl + Shift + I`
 
    - macOS: `Cmd + Option + I`
 
-3. Go to Console tab and `enable Verbose`.
+   > ⚠️ Make sure you're using the Discord desktop app. This will **not work** on the web version.
 
-4. Paste the following code:
+   <img src="./assets/developer-tools.webp" alt="screenshot developer tools" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
+4. Go to **Console** tab and enable `Verbose`.
+
+<img src="./assets/verbose.webp" alt="screenshot verbose" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
+5. Paste the following code:
 
 ```js
 delete window.$;
@@ -322,9 +344,13 @@ if (!quest) {
 }
 ```
 
-5. Let it sit for the quest time (e.g., 900 seconds).
+5. Let it sit for the quest time (e.g., **900 seconds**).
 
-6. Click Claim Reward once available.
+<img src="./assets/quest-time.webp" alt="screenshot quest time" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
+6. Click **Claim Reward** once available.
+
+<img src="./assets/claim.webp" alt="screenshot claim" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
 
 ---
 
