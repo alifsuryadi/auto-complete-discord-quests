@@ -13,8 +13,17 @@ Metode ini **tidak disarankan untuk akun utama Anda**. Modifikasi terhadap klien
 ### Windows
 
 1. **Tutup Discord sepenuhnya** (Klik kanan di taskbar > Quit Discord).
+
+<img src="./assets/close-discord.webp" alt="screenshot close discord" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
 2. Tekan `Windows + R`, ketik: `%appdata%\discord`
+
+<img src="./assets/windows-run.webp" alt="screenshot windows run" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
 3. Buat cadangan `settings.json` → Ubah namanya jadi `settings_old.json`
+
+<img src="./assets/settings.webp" alt="screenshot settings" width="400" style="margin-bottom: 16px; margin-left: 20px;"/>
+
 4. Ganti isi `settings.json` dengan:
 
 #### Script Settings
@@ -38,11 +47,14 @@ Metode ini **tidak disarankan untuk akun utama Anda**. Modifikasi terhadap klien
 
 ### macOS
 
+> ⚠️ Catatan: Saya tidak punya perangkat Mac, jadi tidak ada tangkapan layar di bagian ini.  
+> Tapi kamu tetap bisa mengikuti langkah-langkah di bawah ini karena sudah dijelaskan dengan jelas.
+
 1. Tutup Discord.
 
-2. Buka Finder > Go > "Go to Folder" (Shift + Cmd + G)
+2. Buka Finder > Go > "Go to Folder" `(Shift + Cmd + G)`
 
-3. Masukkan: ~/Library/Application Support/discord
+3. Masukkan: `~/Library/Application Support/discord`
 
 4. Backup dan ubah nama `settings.json` menjadi `settings_old.json`
 
@@ -52,17 +64,27 @@ Metode ini **tidak disarankan untuk akun utama Anda**. Modifikasi terhadap klien
 
 ## 🧪 Langkah 2: Selesaikan Misi Tanpa Main
 
-1. Buka tab `Quests` di Discord dan `pilih misi apa saja`.
+1. Buka tab **Quests** di Discord dan **pilih misi apa saja**.
 
-2. Buka Developer Tools:
+2. Pastikan untuk memilih **"Quest on Desktop"**, bukan versi mobile.
+
+<img src="./assets/quest-on-desktop.webp" alt="screenshot quest on desktop" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
+3. Buka Developer Tools di **aplikasi Discord desktop yang terinstall** (bukan Discord Web):
 
    - Windows: `Ctrl + Shift + I`
 
    - macOS: `Cmd + Option + I`
 
-3. Pilih tab Console, aktifkan `Verbose`.
+   > ⚠️ Pastikan kamu menggunakan aplikasi Discord desktop. Cara ini **tidak akan bekerja** di versi web.
 
-4. Tempel kode berikut:
+    <img src="./assets/developer-tools.webp" alt="screenshot developer tools" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
+4. Pilih tab **Console**, aktifkan `Verbose`.
+
+<img src="./assets/verbose.webp" alt="screenshot verbose" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
+5. Tempel kode berikut:
 
 ```js
 delete window.$;
@@ -322,9 +344,13 @@ if (!quest) {
 }
 ```
 
-5. Diamkan hingga durasi misi selesai (misalnya 900 detik).
+5. Diamkan hingga durasi misi selesai (misalnya **900 detik**).
 
-6. Klik `Claim Reward` setelah tombolnya aktif.
+<img src="./assets/quest-time.webp" alt="screenshot quest time" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
+
+6. Klik **Claim Reward** setelah tombolnya aktif.
+
+<img src="./assets/claim.webp" alt="screenshot claim" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
 
 ---
 
