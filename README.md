@@ -66,7 +66,7 @@ This method is **not recommended for your main account**. Modifying the Discord 
 
 1. Open Discord, go to the **Quests tab**, and **accept any quest**.
 
-2. Make sure to select **"Quest on Desktop"**, not mobile.
+2. Make sure to select **"Quest on Desktop"**, not console.
 
 <img src="./assets/quest-on-desktop.webp" alt="screenshot quest on desktop" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
 
@@ -84,7 +84,7 @@ This method is **not recommended for your main account**. Modifying the Discord 
 
 <img src="./assets/verbose.webp" alt="screenshot verbose" width="300" style="margin-bottom: 16px; margin-left: 20px;"/>
 
-5. Paste the following code:
+5. Paste the following [code](./script.js):
 
 ```js
 delete window.$;
