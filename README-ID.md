@@ -356,4 +356,4 @@ if (!quest) {
 
 ## 📜 Disclaimer
 
-> Repositori ini hanya untuk tujuan edukasi. Penulis tidak bertanggung jawab atas ban akun, kehilangan data, atau efek lain yang mungkin timbul dari penggunaan metode ini.
+> ⚠️ Repositori ini hanya untuk tujuan edukasi. Penulis tidak bertanggung jawab atas ban akun, kehilangan data, atau efek lain yang mungkin timbul dari penggunaan metode ini.

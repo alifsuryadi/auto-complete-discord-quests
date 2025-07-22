@@ -356,4 +356,4 @@ if (!quest) {
 
 ## 📜 Disclaimer
 
-> This repository is for educational purposes only. The author is not responsible for any bans, data loss, or other consequences that may occur from using this method.
+> ⚠️ This repository is for educational purposes only. The author is not responsible for any bans, data loss, or other consequences that may occur from using this method.
