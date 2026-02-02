@@ -88,33 +88,57 @@ Metode ini **tidak disarankan untuk akun utama Anda**. Modifikasi terhadap klien
 
 ```js
 delete window.$;
-let wpRequire = webpackChunkdiscord_app.push([[Symbol()], {}, r => r]);
+let wpRequire = webpackChunkdiscord_app.push([[Symbol()], {}, (r) => r]);
 webpackChunkdiscord_app.pop();
 
 const findModule = (filter) => {
-    for (const i in wpRequire.c) {
-        const m = wpRequire.c[i].exports;
-        if (!m) continue;
-        const targets = [m.Z, m.ZP, m.default, m.Ay, m.Bo, m.tn, m.A, m].filter(t => t && typeof t === 'object');
-        for (const t of targets) {
-            try { if (filter(t)) return t; } catch(e) {}
-        }
+  for (const i in wpRequire.c) {
+    const m = wpRequire.c[i].exports;
+    if (!m) continue;
+    const targets = [m.Z, m.ZP, m.default, m.Ay, m.Bo, m.tn, m.A, m].filter(
+      (t) => t && typeof t === "object",
+    );
+    for (const t of targets) {
+      try {
+        if (filter(t)) return t;
+      } catch (e) {}
     }
+  }
 };
 
-const ApplicationStreamingStore = findModule(m => m.getStreamerActiveStreamMetadata);
-const RunningGameStore = findModule(m => m.getRunningGames);
-const QuestsStore = findModule(m => m.getQuest && (m.quests || m.getQuests));
-const ChannelStore = findModule(m => m.getSortedPrivateChannels || m.getAllThreadsForParent);
-const GuildChannelStore = findModule(m => m.getSFWDefaultChannel);
-const FluxDispatcher = findModule(m => m.flushWaitQueue);
-const api = findModule(m => m.get && m.post && m.put);
+const ApplicationStreamingStore = findModule(
+  (m) => m.getStreamerActiveStreamMetadata,
+);
+const RunningGameStore = findModule((m) => m.getRunningGames);
+const QuestsStore = findModule((m) => m.getQuest && (m.quests || m.getQuests));
+const ChannelStore = findModule(
+  (m) => m.getSortedPrivateChannels || m.getAllThreadsForParent,
+);
+const GuildChannelStore = findModule((m) => m.getSFWDefaultChannel);
+const FluxDispatcher = findModule((m) => m.flushWaitQueue);
+const api = findModule((m) => m.get && m.post && m.put);
 
-const supportedTasks = ["WATCH_VIDEO", "PLAY_ON_DESKTOP", "STREAM_ON_DESKTOP", "PLAY_ACTIVITY", "WATCH_VIDEO_ON_MOBILE"];
+const supportedTasks = [
+  "WATCH_VIDEO",
+  "PLAY_ON_DESKTOP",
+  "STREAM_ON_DESKTOP",
+  "PLAY_ACTIVITY",
+  "WATCH_VIDEO_ON_MOBILE",
+];
 
-const rawQuests = QuestsStore?.getQuests ? QuestsStore.getQuests() : QuestsStore?.quests;
-let quests = (rawQuests instanceof Map ? Array.from(rawQuests.values()) : Object.values(rawQuests || {}))
-    .filter(x => x.userStatus?.enrolledAt && !x.userStatus?.completedAt && new Date(x.config.expiresAt).getTime() > Date.now());
+const rawQuests = QuestsStore?.getQuests
+  ? QuestsStore.getQuests()
+  : QuestsStore?.quests;
+let quests = (
+  rawQuests instanceof Map
+    ? Array.from(rawQuests.values())
+    : Object.values(rawQuests || {})
+).filter(
+  (x) =>
+    x.userStatus?.enrolledAt &&
+    !x.userStatus?.completedAt &&
+    new Date(x.config.expiresAt).getTime() > Date.now(),
+);
 
 let isApp = typeof DiscordNative !== "undefined";
 
